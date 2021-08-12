@@ -1,0 +1,50 @@
+.btn {
+	border: none;
+	font-family: $ubuntu;
+	font-weight: 700;
+	padding: 12px 19px;
+	border-radius: 50px;
+	cursor: pointer;
+	margin-inline: 8px;
+	white-space: nowrap;
+
+	transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	&--solid {
+		border: 1px solid white;
+		background: white;
+		color: $primary-red;
+
+		&:hover {
+			color: white;
+			background: rgba(255, 255, 255, 0.164);
+			border: 1px solid transparent;
+		}
+	}
+
+	&--transparent {
+		border: 1px solid white;
+		background: rgba(255, 255, 255, 0.048);
+		color: white;
+
+		&:hover {
+			color: $primary-red;
+			background: white;
+		}
+	}
+
+	&--no-border {
+		border: 1px solid transparent !important;
+		background: transparent !important;
+		opacity: 0.75;
+
+		&:hover {
+			opacity: 1;
+			color: white !important;
+		}
+	}
+
+	&--side-padding {
+		padding-inline: 32px;
+	}
+}

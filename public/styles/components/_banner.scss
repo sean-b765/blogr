@@ -1,0 +1,60 @@
+.banner {
+	position: relative;
+	padding: 8rem 0 4rem 0;
+	width: 100%;
+	background: $header-gradient;
+	z-index: 1;
+	border-bottom-left-radius: 70px;
+	overflow: hidden;
+
+	&__bg {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/bg-pattern-intro.svg');
+		background-position: center;
+		background-attachment: fixed;
+		background-size: 130%;
+		background-repeat: no-repeat;
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 1;
+		font-family: $overpass;
+		width: 100%;
+		padding: 5rem 0 3rem 0;
+		color: white;
+
+		&__title {
+			font-weight: 600;
+			font-size: 2.8rem;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		&__body {
+			color: rgba(255, 255, 255, 0.87);
+			font-weight: 300;
+			margin-bottom: 45px;
+			text-align: center;
+		}
+
+		&__footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 8rem 1rem 4rem 1rem;
+	}
+}

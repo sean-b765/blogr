@@ -1,0 +1,108 @@
+.footer {
+	position: relative;
+	background: $mid-gradient;
+	padding: 3rem calc(#{$inline-padding} * 2) 3rem $inline-padding;
+	font-family: $ubuntu;
+	border-top-right-radius: 70px;
+	overflow: hidden;
+	max-width: 100vw;
+
+	&__created {
+		font-family: $overpass;
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.918);
+		letter-spacing: 1px;
+		width: 100%;
+		margin-top: 60px;
+		max-width: 1000px;
+
+		@media screen and (max-width: 768px) {
+			text-align: center;
+			margin-top: 30px;
+		}
+	}
+
+	&__split {
+		max-width: 1000px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: row;
+
+		&__logo {
+			flex: 1;
+			margin-right: 2rem;
+		}
+		&__nav {
+			flex: 3;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			flex-direction: row;
+
+			ul {
+				h3 {
+					font-size: 1rem;
+					color: white;
+					margin: 10px 0 30px 0;
+				}
+				li {
+					padding: 7px 0;
+
+					&:hover > a {
+						color: white !important;
+					}
+
+					a {
+						color: rgba(255, 255, 255, 0.76);
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 3rem $inline-padding;
+
+		&__split {
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			&__logo {
+				margin: 0 0 2rem 0;
+			}
+
+			&__nav {
+				display: flex;
+				width: 100%;
+				justify-content: space-evenly;
+
+				ul {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+				}
+
+				@media screen and (max-width: 640px) {
+					align-items: center;
+					flex-direction: column;
+
+					li {
+						margin-bottom: 11px;
+
+						a {
+							padding: 9px 5px;
+						}
+					}
+
+					ul:not(ul:last-child) {
+						margin-bottom: 40px;
+					}
+				}
+			}
+		}
+	}
+}

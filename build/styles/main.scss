@@ -1,0 +1,143 @@
+@import './abstracts/index';
+
+@import './components/index';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	width: 100vw;
+}
+
+p {
+	line-height: 1.6em;
+	letter-spacing: 1px;
+	font-size: 0.95rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.4rem;
+}
+
+ul li {
+	list-style: none;
+	a {
+		text-decoration: none;
+	}
+}
+
+.container {
+	position: relative;
+	width: 100%;
+}
+
+.content-box {
+	position: relative;
+	font-family: $overpass;
+	padding: 10rem $inline-padding 15rem $inline-padding;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	h2,
+	h3 {
+		font-weight: 700;
+		color: $neutral-gray-darker;
+	}
+
+	p {
+		color: $neutral-gray-dark;
+	}
+
+	> header {
+		position: relative;
+		margin-bottom: 80px;
+	}
+
+	&__split {
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+
+		&__content {
+			position: relative;
+			flex: 1;
+			max-width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+
+			article:last-child {
+				header {
+					margin-top: 40px;
+				}
+			}
+
+			header {
+				margin: 0px 0 15px 0;
+			}
+
+			img {
+				position: absolute;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		> header {
+			margin: 0 0 50px 0 !important;
+		}
+
+		header {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		&__split {
+			flex-direction: column-reverse;
+			&__content {
+				max-width: 100% !important;
+				justify-content: center !important;
+
+				&--image {
+					background-position: center;
+					background-size: auto 100%;
+					background-repeat: no-repeat;
+					background-image: url('../images/illustration-editor-mobile.svg');
+					min-height: 20rem !important;
+					margin: 2rem 0;
+				}
+			}
+		}
+		background: none;
+	}
+
+	@media screen and (max-width: 380px) {
+		padding: 5rem $inline-padding;
+
+		> header {
+			margin: 0 !important;
+		}
+
+		&__split__content--image {
+			background-size: 120% auto;
+		}
+	}
+}

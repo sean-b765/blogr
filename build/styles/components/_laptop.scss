@@ -1,0 +1,24 @@
+.laptop {
+	padding: 15rem $inline-padding;
+	background-image: url('../images/illustration-laptop-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: 45rem auto;
+	background-position: left -12rem top 50%;
+
+	@media screen and (max-width: 960px) {
+		background-position: left -20rem top calc(50%);
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 0 $inline-padding 3rem $inline-padding !important;
+
+		&__split {
+			flex-direction: column !important;
+			&__content--image {
+				background-image: url('../images/illustration-laptop-mobile.svg') !important;
+				margin-bottom: 0 !important;
+				padding: 0;
+			}
+		}
+	}
+}

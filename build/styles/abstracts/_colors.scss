@@ -1,0 +1,14 @@
+$primary-red: hsl(356, 100%, 66%);
+$primary-red-light: hsl(355, 100%, 74%);
+$primary-blue-dark: hsl(208, 49%, 24%);
+
+$neutral-gray: hsl(240, 2%, 79%);
+$neutral-gray-dark: hsl(207, 13%, 34%);
+$neutral-gray-darker: hsl(240, 10%, 16%);
+
+$header-gradient: linear-gradient(
+	90deg,
+	hsl(13, 100%, 72%),
+	hsl(353, 100%, 62%)
+);
+$mid-gradient: linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
