@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Blogr
+
+[View Demo](https://blogr123.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
